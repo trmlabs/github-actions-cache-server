@@ -44,7 +44,7 @@ jobs:
 
       - uses: actions/setup-node@v6
         with:
-          node-version: lts/*
+          node-version: '24.22.1'
 
       - name: ⬆️ Bump version
         if: github.event_name == 'workflow_dispatch'
@@ -160,7 +160,7 @@ jobs:
           tags: ${{ steps.meta-caged.outputs.tags }}
           labels: ${{ steps.meta-caged.outputs.labels }}
           build-args: |
-            BASE_IMAGE=platformatic/node-caged:25-alpine
+            BASE_IMAGE=platformatic/node-caged:26.12.1-alpine@sha256:fe8ec90570374d012cc8a61a5f19e7fadd8621b97f9690126de15425549ae02f
 
   deploy-chart:
     name: 🚀 Build and push Helm chart
