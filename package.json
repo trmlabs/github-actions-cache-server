@@ -54,6 +54,11 @@
     "typescript": "^5.9.3",
     "zod": "^4.3.6"
   },
+  "pnpm": {
+    "overrides": {
+      "fast-xml-parser": "5.5.12"
+    }
+  },
   "devDependencies": {
     "@actions/cache": "^6.0.0",
     "@falcondev-oss/configs": "^5.0.2",
